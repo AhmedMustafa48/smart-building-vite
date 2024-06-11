@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react'
 import {
   Box,
   Typography,
@@ -8,113 +8,113 @@ import {
   Stack,
   Divider,
   styled,
-} from "@mui/material";
-import { RecentlyInspectedBuildingsSkeleton } from "../../../../../components/Skeleton";
-import { useDispatch, useSelector } from "react-redux";
-import { setLoading } from "../../../../../features/loading/loadingSlice";
+} from '@mui/material'
+import { RecentlyInspectedBuildingsSkeleton } from '../../../../../components/Skeleton'
+import { useDispatch, useSelector } from 'react-redux'
+import { setLoading } from '../../../../../features/loading/loadingSlice'
 
 const InspectionBuilding = () => {
-  const dispatch = useDispatch();
-  const { isLoading } = useSelector((state) => state.loading);
+  const dispatch = useDispatch()
+  const { isLoading } = useSelector((state) => state.loading)
 
   useEffect(() => {
     setTimeout(() => {
-      dispatch(setLoading(false));
-    }, 3000);
-  }, []);
+      dispatch(setLoading(false))
+    }, 3000)
+  }, [])
   const data = [
     {
-      building: "Block of Flats",
-      date: "29-06-2019",
-      status: "Good",
-      subtext: "Subtext 1",
+      building: 'Block of Flats',
+      date: '29-06-2019',
+      status: 'Good',
+      subtext: 'Subtext 1',
       icon: true,
     },
     {
-      building: "Office Building",
-      date: "15-08-2020",
-      status: "Good",
-      subtext: "Subtext 2",
+      building: 'Office Building',
+      date: '15-08-2020',
+      status: 'Good',
+      subtext: 'Subtext 2',
       icon: true,
     },
     {
-      building: "Retail Store",
-      date: "01-12-2021",
-      status: "Good",
-      subtext: "Subtext 3",
+      building: 'Retail Store',
+      date: '01-12-2021',
+      status: 'Good',
+      subtext: 'Subtext 3',
       icon: true,
     },
     {
-      building: "Warehouse",
-      date: "18-03-2022",
-      status: "Good",
-      subtext: "Subtext 4",
+      building: 'Warehouse',
+      date: '18-03-2022',
+      status: 'Good',
+      subtext: 'Subtext 4',
       icon: true,
     },
     {
-      building: "Block of Flats",
-      date: "29-06-2019",
-      status: "Good",
-      subtext: "Subtext 5",
+      building: 'Block of Flats',
+      date: '29-06-2019',
+      status: 'Good',
+      subtext: 'Subtext 5',
       icon: true,
     },
     {
-      building: "Office Building",
-      date: "15-08-2020",
-      status: "Good",
-      subtext: "Subtext 6",
+      building: 'Office Building',
+      date: '15-08-2020',
+      status: 'Good',
+      subtext: 'Subtext 6',
       icon: true,
     },
     {
-      building: "Retail Store",
-      date: "01-12-2021",
-      status: "Good",
-      subtext: "Subtext 7",
+      building: 'Retail Store',
+      date: '01-12-2021',
+      status: 'Good',
+      subtext: 'Subtext 7',
       icon: true,
     },
     {
-      building: "Warehouse",
-      date: "18-03-2022",
-      status: "Good",
-      subtext: "Subtext 8",
+      building: 'Warehouse',
+      date: '18-03-2022',
+      status: 'Good',
+      subtext: 'Subtext 8',
       icon: true,
     },
     {
-      building: "Block of Flats",
-      date: "29-06-2019",
-      status: "Good",
-      subtext: "Subtext 9",
+      building: 'Block of Flats',
+      date: '29-06-2019',
+      status: 'Good',
+      subtext: 'Subtext 9',
       icon: true,
     },
     {
-      building: "Office Building",
-      date: "15-08-2020",
-      status: "Good",
-      subtext: "Subtext 10",
+      building: 'Office Building',
+      date: '15-08-2020',
+      status: 'Good',
+      subtext: 'Subtext 10',
       icon: true,
     },
     {
-      building: "Retail Store",
-      date: "01-12-2021",
-      status: "Good",
-      subtext: "Subtext 11",
+      building: 'Retail Store',
+      date: '01-12-2021',
+      status: 'Good',
+      subtext: 'Subtext 11',
       icon: true,
     },
     {
-      building: "Warehouse",
-      date: "18-03-2022",
-      status: "Good",
-      subtext: "Subtext 12",
+      building: 'Warehouse',
+      date: '18-03-2022',
+      status: 'Good',
+      subtext: 'Subtext 12',
       icon: true,
     },
-  ];
+  ]
 
   return (
     <>
       {isLoading ? (
         <RecentlyInspectedBuildingsSkeleton />
       ) : (
-        <Card variant="outlined" sx={{ overflow: "auto" }}>
+        <Card variant="outlined" sx={{ overflow: 'auto' }}>
           <Box sx={{ p: { xs: 1, md: 2 } }}>
             <Stack
               direction="row"
@@ -125,7 +125,7 @@ const InspectionBuilding = () => {
                 sx={{
                   fontWeight: 600,
                   fontSize: { xs: 12, md: 14 },
-                  color: "rgba(17, 17, 17, 1)",
+                  color: 'rgba(17, 17, 17, 1)',
                   fontFamily: "'Poppins', sans-serif",
                 }}
               >
@@ -135,9 +135,9 @@ const InspectionBuilding = () => {
                 sx={{
                   fontWeight: 400,
                   fontSize: 12,
-                  color: "rgba(12, 35, 77, 1)",
+                  color: 'rgba(12, 35, 77, 1)',
                   fontFamily: "'Poppins', sans-serif",
-                  cursor: "pointer",
+                  cursor: 'pointer',
                 }}
               >
                 See full report
@@ -146,12 +146,12 @@ const InspectionBuilding = () => {
             <Divider sx={{ my: 1 }} />
             <Box
               sx={{
-                display: "flex",
-                justifyContent: "space-between",
+                display: 'flex',
+                justifyContent: 'space-between',
                 maxHeight: 31,
-                alignItems: "center",
+                alignItems: 'center',
                 p: 1,
-                backgroundColor: "rgba(216, 218, 219, 1)",
+                backgroundColor: 'rgba(216, 218, 219, 1)',
               }}
             >
               <CustomText
@@ -184,8 +184,8 @@ const InspectionBuilding = () => {
               </CustomText>
               <CustomText
                 sx={{
-                  flex: "none",
-                  width: "60px",
+                  flex: 'none',
+                  width: '60px',
                 }}
                 variant="body2"
               ></CustomText>
@@ -195,9 +195,9 @@ const InspectionBuilding = () => {
                 <Grid item xs={12} key={index}>
                   <Box
                     sx={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
                       p: 1,
                       //   gap: 1,
                     }}
@@ -211,7 +211,7 @@ const InspectionBuilding = () => {
                       <Typography
                         variant="body2"
                         sx={{
-                          color: "rgba(17, 17, 17, 0.2)",
+                          color: 'rgba(17, 17, 17, 0.2)',
                           fontWeight: 400,
                           fontSize: 12,
                         }}
@@ -229,7 +229,7 @@ const InspectionBuilding = () => {
                     </CustomText>
                     <Typography
                       sx={{
-                        color: "rgba(97, 202, 148, 1)",
+                        color: 'rgba(97, 202, 148, 1)',
                         fontWeight: 400,
                         fontSize: { xs: 12, md: 14 },
                         flex: 1,
@@ -240,8 +240,8 @@ const InspectionBuilding = () => {
                     </Typography>
                     <Box
                       sx={{
-                        flex: "none",
-                        width: "60px",
+                        flex: 'none',
+                        width: '60px',
                       }}
                     >
                       {item.icon && (
@@ -255,18 +255,18 @@ const InspectionBuilding = () => {
                           <path
                             d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
                             stroke="#111111"
-                            stroke-opacity="0.2"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeOpacity="0.2"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           />
                           <path
                             d="M14 2V8H20"
                             stroke="#111111"
-                            stroke-opacity="0.2"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeOpacity="0.2"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           />
                         </svg>
                       )}
@@ -280,12 +280,12 @@ const InspectionBuilding = () => {
         </Card>
       )}
     </>
-  );
-};
+  )
+}
 const CustomText = styled(Typography)(({ theme }) => ({
   fontWeight: 400,
   fontSize: 12,
-  color: "rgba(17, 17, 17, 0.6)",
+  color: 'rgba(17, 17, 17, 0.6)',
   fontFamily: "'Poppins', sans-serif",
-}));
-export default InspectionBuilding;
+}))
+export default InspectionBuilding
